@@ -1,10 +1,8 @@
 {
-  "version": "1.63",
-  "version_code": 10,
-  "download_url": "",
-  "archive_sha256": "cdfbfc08705f306db5dfb8c05d096d696e3cc4202203987f6164762acd97e613",
-  "apk_sha256": "5454c68b99de917f588e853cb988fe7f5d7624458a32ee738942c665c4e1751b",
-  "notes": "ID Vault V1.63\n\n- Kiểm tra cập nhật ngay trong Cài đặt → Cập nhật ứng dụng.\n- Tải APK vào bộ nhớ tạm riêng, không lưu trong Downloads; dọn file khi đóng trình cài đặt hoặc mở lại app.\n- Kiểm tra SHA-256, ứng dụng, phiên bản và chữ ký trước khi cài.\n- Đã kiểm thử Android 15 và cài đè từ V1.62 giữ nguyên giấy tờ, ảnh và cài đặt.\n\nCài cập nhật bằng APK; không gỡ ứng dụng cũ.",
-  "status": "published",
-  "published_release": "https://github.com/nghialcvn/ID-Vault-Releases/releases/tag/v1.63"
+  "version": "1.64",
+  "version_code": 11,
+  "download_url": "https://sdmntprseasia.oaiusercontent.com/files/00000000-6e54-8207-9b75-ee310f774f79/raw?se=2026-11-18T17%3A00%3A37Z&sp=r&sv=2026-06-06&sr=b&scid=bdc5a5af-e9cc-4eee-84a3-86f0874f5eea&skoid=6980ab1e-b994-4668-84de-ad0444c9d08b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-18T04%3A34%3A47Z&ske=2026-11-19T04%3A34%3A47Z&sks=b&skv=2026-06-06&sig=jc1iSwSApXI9AntsVJ2GD52tZDJhMXgVTavPTPpiNkU%3D",
+  "archive_sha256": "faa6c58a390fb1ac282562977bfb803445d5ab84c206f21368b1179fbb18377c",
+  "apk_sha256": "f87cf9b58a0c80c9cdb8eaf733983c22ed59607d88631c4133a3ebbf7ac48b5e",
+  "notes": "ID Vault v1.64\n\n- Thêm kho Tài khoản: lưu ID/email và mật khẩu mã hóa; xác thực riêng bằng vân tay/PIN để xem hoặc sửa mật khẩu, tự ẩn khi rời app hoặc sau 15 giây.\n- Nhắc đổi mật khẩu theo chu kỳ 1/2/3/6 tháng hoặc tùy chọn, đếm ngược và ghi nhận lần đổi mới.\n- Bật/tắt khóa mở ứng dụng trong Bảo mật; mã hóa dữ liệu và bảo vệ mật khẩu vẫn giữ nguyên.\n- Gửi email nhắc hạn nằm trong Nhắc hạn.\n- Sao lưu/khôi phục mã hóa bằng mật khẩu và Cập nhật ứng dụng nằm trong Thông tin ứng dụng. Khôi phục nhập thêm, giữ nguyên dữ liệu hiện có.\n- Hoàn thiện giao diện xanh đen theo ảnh thiết kế, có Sáng/Tối.\n\nĐã kiểm tra: 12 bài kiểm tra logic, 11 kiểm tra Android 15, hai bước kiểm tra nâng cấp từ V1.63 giữ giấy tờ/ảnh/cài đặt, và đối chiếu 24 ảnh chụp giao diện thật trên giả lập. Chưa kiểm thử vân tay hoặc gửi Gmail bằng tài khoản thật trên Samsung.\n\nCài đè bản hiện tại bằng APK; không gỡ ứng dụng cũ. Tiếp tục dùng khóa ký cố định."
 }
