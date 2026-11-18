@@ -1,10 +1,8 @@
 {
-  "version": "1.64",
-  "version_code": 11,
-  "download_url": "",
-  "archive_sha256": "faa6c58a390fb1ac282562977bfb803445d5ab84c206f21368b1179fbb18377c",
-  "apk_sha256": "f87cf9b58a0c80c9cdb8eaf733983c22ed59607d88631c4133a3ebbf7ac48b5e",
-  "notes": "ID Vault v1.64\n\n- Thêm kho Tài khoản: lưu ID/email và mật khẩu mã hóa; xác thực riêng bằng vân tay/PIN để xem hoặc sửa mật khẩu, tự ẩn khi rời app hoặc sau 15 giây.\n- Nhắc đổi mật khẩu theo chu kỳ 1/2/3/6 tháng hoặc tùy chọn, đếm ngược và ghi nhận lần đổi mới.\n- Bật/tắt khóa mở ứng dụng trong Bảo mật; mã hóa dữ liệu và bảo vệ mật khẩu vẫn giữ nguyên.\n- Gửi email nhắc hạn nằm trong Nhắc hạn.\n- Sao lưu/khôi phục mã hóa bằng mật khẩu và Cập nhật ứng dụng nằm trong Thông tin ứng dụng. Khôi phục nhập thêm, giữ nguyên dữ liệu hiện có.\n- Hoàn thiện giao diện xanh đen theo ảnh thiết kế, có Sáng/Tối.\n\nĐã kiểm tra: 12 bài kiểm tra logic, 11 kiểm tra Android 15, hai bước kiểm tra nâng cấp từ V1.63 giữ giấy tờ/ảnh/cài đặt, và đối chiếu 24 ảnh chụp giao diện thật trên giả lập. Chưa kiểm thử vân tay hoặc gửi Gmail bằng tài khoản thật trên Samsung.\n\nCài đè bản hiện tại bằng APK; không gỡ ứng dụng cũ. Tiếp tục dùng khóa ký cố định.",
-  "status": "published",
-  "published_release": "https://github.com/nghialcvn/ID-Vault-Releases/releases/tag/v1.64"
+  "version": "1.65",
+  "version_code": 12,
+  "download_url": "https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-6ee0-8211-b154-ae74b303ac59/raw?se=2026-11-18T18%3A43%3A05Z&sp=r&sv=2026-06-06&sr=b&scid=330c25b9-a4cf-4019-af08-7a8c645efcbe&skoid=fb469448-2cc9-41bd-a5a6-6e020952b47a&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-18T04%3A30%3A50Z&ske=2026-11-19T04%3A30%3A50Z&sks=b&skv=2026-06-06&sig=SOIFWo6sFGN0nd08lWznevttG1GTwKq7Uscgh/d9tVg%3D",
+  "archive_sha256": "526488ba905d2773801934dae0f4706cea6d11f1a231370f5cf5a30633885331",
+  "apk_sha256": "bf7d233c4ba02569f1cf24778bf4b9b7d6de768b65b3b5bc548b1374ba0ba8d5",
+  "notes": "ID Vault v1.65\n\n- Danh sách tài khoản gom theo thương hiệu, có logo, số lượng và banner riêng.\n- Icon từng tài khoản theo phân loại Cá nhân / Công việc / Dự phòng; gợi ý thương hiệu khi gõ chữ đầu.\n- Biểu tượng giấy tờ màu sắc theo từng loại; thẻ và nút có chiều sâu, bóng mềm hơn.\n- Gửi email nằm đầu mục Nhắc hạn.\n- Trang Cập nhật gọn, chỉ hiện trạng thái và tính năng của phiên bản tương ứng.\n\nĐã kiểm tra: 13 bài kiểm tra logic, 14 kiểm tra Android 15, nâng cấp từ V1.64 giữ giấy tờ/ảnh/cài đặt và tài khoản cũ; đối chiếu 27 ảnh chụp giao diện thật trên giả lập, ở cả Sáng/Tối.\n\nTiếp tục dùng khóa ký cố định. Cài đè bản hiện tại, không gỡ ứng dụng cũ. Chưa kiểm thử vân tay/Gmail trên Samsung thật."
 }
