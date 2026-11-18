@@ -1,8 +1,10 @@
 {
   "version": "1.63",
   "version_code": 10,
-  "download_url": "https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-b0d4-8211-acf6-a44e771e3438/raw?se=2026-11-18T15%3A26%3A17Z&sp=r&sv=2026-06-06&sr=b&scid=0e1019e2-b6d8-49e4-8b61-94e511e54366&skoid=fb469448-2cc9-41bd-a5a6-6e020952b47a&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-18T15%3A17%3A13Z&ske=2026-11-19T15%3A17%3A13Z&sks=b&skv=2026-06-06&sig=0yNnM09BVQf1Y5cEHsUvW6u6W3EV5QiBc98Wfp4LlJs%3D",
+  "download_url": "",
   "archive_sha256": "cdfbfc08705f306db5dfb8c05d096d696e3cc4202203987f6164762acd97e613",
   "apk_sha256": "5454c68b99de917f588e853cb988fe7f5d7624458a32ee738942c665c4e1751b",
-  "notes": "ID Vault V1.63\n\n- Kiểm tra cập nhật ngay trong Cài đặt → Cập nhật ứng dụng.\n- Tải APK vào bộ nhớ tạm riêng, không lưu trong Downloads; dọn file khi đóng trình cài đặt hoặc mở lại app.\n- Kiểm tra SHA-256, ứng dụng, phiên bản và chữ ký trước khi cài.\n- Đã kiểm thử Android 15 và cài đè từ V1.62 giữ nguyên giấy tờ, ảnh và cài đặt.\n\nCài cập nhật bằng APK; không gỡ ứng dụng cũ."
+  "notes": "ID Vault V1.63\n\n- Kiểm tra cập nhật ngay trong Cài đặt → Cập nhật ứng dụng.\n- Tải APK vào bộ nhớ tạm riêng, không lưu trong Downloads; dọn file khi đóng trình cài đặt hoặc mở lại app.\n- Kiểm tra SHA-256, ứng dụng, phiên bản và chữ ký trước khi cài.\n- Đã kiểm thử Android 15 và cài đè từ V1.62 giữ nguyên giấy tờ, ảnh và cài đặt.\n\nCài cập nhật bằng APK; không gỡ ứng dụng cũ.",
+  "status": "published",
+  "published_release": "https://github.com/nghialcvn/ID-Vault-Releases/releases/tag/v1.63"
 }
