@@ -1,8 +1,10 @@
 {
   "version": "1.65",
   "version_code": 12,
-  "download_url": "https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-6ee0-8211-b154-ae74b303ac59/raw?se=2026-11-18T18%3A43%3A05Z&sp=r&sv=2026-06-06&sr=b&scid=330c25b9-a4cf-4019-af08-7a8c645efcbe&skoid=fb469448-2cc9-41bd-a5a6-6e020952b47a&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-18T04%3A30%3A50Z&ske=2026-11-19T04%3A30%3A50Z&sks=b&skv=2026-06-06&sig=SOIFWo6sFGN0nd08lWznevttG1GTwKq7Uscgh/d9tVg%3D",
+  "download_url": "",
   "archive_sha256": "526488ba905d2773801934dae0f4706cea6d11f1a231370f5cf5a30633885331",
   "apk_sha256": "bf7d233c4ba02569f1cf24778bf4b9b7d6de768b65b3b5bc548b1374ba0ba8d5",
-  "notes": "ID Vault v1.65\n\n- Danh sách tài khoản gom theo thương hiệu, có logo, số lượng và banner riêng.\n- Icon từng tài khoản theo phân loại Cá nhân / Công việc / Dự phòng; gợi ý thương hiệu khi gõ chữ đầu.\n- Biểu tượng giấy tờ màu sắc theo từng loại; thẻ và nút có chiều sâu, bóng mềm hơn.\n- Gửi email nằm đầu mục Nhắc hạn.\n- Trang Cập nhật gọn, chỉ hiện trạng thái và tính năng của phiên bản tương ứng.\n\nĐã kiểm tra: 13 bài kiểm tra logic, 14 kiểm tra Android 15, nâng cấp từ V1.64 giữ giấy tờ/ảnh/cài đặt và tài khoản cũ; đối chiếu 27 ảnh chụp giao diện thật trên giả lập, ở cả Sáng/Tối.\n\nTiếp tục dùng khóa ký cố định. Cài đè bản hiện tại, không gỡ ứng dụng cũ. Chưa kiểm thử vân tay/Gmail trên Samsung thật."
+  "notes": "ID Vault v1.65\n\n- Danh sách tài khoản gom theo thương hiệu, có logo, số lượng và banner riêng.\n- Icon từng tài khoản theo phân loại Cá nhân / Công việc / Dự phòng; gợi ý thương hiệu khi gõ chữ đầu.\n- Biểu tượng giấy tờ màu sắc theo từng loại; thẻ và nút có chiều sâu, bóng mềm hơn.\n- Gửi email nằm đầu mục Nhắc hạn.\n- Trang Cập nhật gọn, chỉ hiện trạng thái và tính năng của phiên bản tương ứng.\n\nĐã kiểm tra: 13 bài kiểm tra logic, 14 kiểm tra Android 15, nâng cấp từ V1.64 giữ giấy tờ/ảnh/cài đặt và tài khoản cũ; đối chiếu 27 ảnh chụp giao diện thật trên giả lập, ở cả Sáng/Tối.\n\nTiếp tục dùng khóa ký cố định. Cài đè bản hiện tại, không gỡ ứng dụng cũ. Chưa kiểm thử vân tay/Gmail trên Samsung thật.",
+  "status": "published",
+  "published_release": "https://github.com/nghialcvn/ID-Vault-Releases/releases/tag/v1.65"
 }
