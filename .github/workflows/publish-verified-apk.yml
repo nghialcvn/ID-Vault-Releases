@@ -1,0 +1,81 @@
+name: Publish verified ID Vault APK
+on:
+  push:
+    branches: [main]
+    paths: ['.release/request.json']
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: id-vault-public-apk
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Fetch and verify the already-tested APK
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import hashlib,io,json,os,re,subprocess,urllib.parse,urllib.request,zipfile
+          from pathlib import Path
+          manifest=json.loads(Path('.release/request.json').read_text())
+          version=manifest['version']
+          assert re.fullmatch(r'[0-9]+\.[0-9]+(?:\.[0-9]+)?',version)
+          apk_name=f'id-vault-v{version}.apk'
+          parsed=urllib.parse.urlsplit(manifest['download_url'])
+          assert parsed.scheme=='https' and parsed.hostname.endswith('.oaiusercontent.com')
+          assert not parsed.username and not parsed.password and parsed.port in (None,443)
+          class NoRedirect(urllib.request.HTTPRedirectHandler):
+              def redirect_request(self,*args): return None
+          request=urllib.request.Request(manifest['download_url'])
+          with urllib.request.build_opener(NoRedirect()).open(request,timeout=120) as response:
+              archive=response.read(60*1024*1024+1)
+          assert len(archive)<=60*1024*1024
+          assert hashlib.sha256(archive).hexdigest()==manifest['archive_sha256']
+          with zipfile.ZipFile(io.BytesIO(archive)) as bundle:
+              names=bundle.namelist()
+              assert all(Path(n).name in (apk_name,apk_name+'.sha256') for n in names)
+              candidates=[n for n in names if Path(n).name==apk_name]
+              assert len(candidates)==1
+              assert 0<bundle.getinfo(candidates[0]).file_size<=200*1024*1024
+              apk=bundle.read(candidates[0])
+          assert hashlib.sha256(apk).hexdigest()==manifest['apk_sha256']
+          Path('dist').mkdir(exist_ok=True)
+          apk_path=Path('dist')/apk_name
+          apk_path.write_bytes(apk)
+          (Path('dist')/(apk_name+'.sha256')).write_text(manifest['apk_sha256']+'  '+apk_name+'\n')
+          Path('release-notes.md').write_text(manifest['notes'][:6000])
+          sdk=Path(os.environ.get('ANDROID_HOME','/usr/local/lib/android/sdk'))
+          signers=sorted(sdk.glob('build-tools/*/apksigner'))
+          assert signers,'Android SDK signing verifier not available'
+          signer=signers[-1]
+          result=subprocess.check_output([str(signer),'verify','--print-certs',str(apk_path)],text=True)
+          assert '183e40a0c136eaaecddeb4bff7af467095cd52f70feb85539dc980b3e3a6ffa1' in result
+          aapt=signer.parent/'aapt'
+          metadata=subprocess.check_output([str(aapt),'dump','badging',str(apk_path)],text=True).splitlines()[0]
+          assert "name='com.idvault.app'" in metadata
+          assert f"versionName='{version}'" in metadata
+          assert f"versionCode='{int(manifest['version_code'])}'" in metadata
+          print('APK identity, version, SHA-256 and fixed signing certificate verified')
+          with open(os.environ['GITHUB_ENV'],'a') as env:
+              env.write(f'RELEASE_VERSION={version}\n')
+              env.write(f'RELEASE_APK={apk_path}\n')
+          PY
+      - name: Publish verified APK using this repository token
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if gh release view "v$RELEASE_VERSION" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo '::error::This version is already published; existing releases are never replaced.'
+            exit 1
+          fi
+          gh release create "v$RELEASE_VERSION" "$RELEASE_APK" "$RELEASE_APK.sha256" --repo "$GITHUB_REPOSITORY" --title "ID Vault v$RELEASE_VERSION" --notes-file release-notes.md --latest
