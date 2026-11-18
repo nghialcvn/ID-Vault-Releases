@@ -1,10 +1,8 @@
 {
-  "version": "1.65",
-  "version_code": 12,
-  "download_url": "",
-  "archive_sha256": "526488ba905d2773801934dae0f4706cea6d11f1a231370f5cf5a30633885331",
-  "apk_sha256": "bf7d233c4ba02569f1cf24778bf4b9b7d6de768b65b3b5bc548b1374ba0ba8d5",
-  "notes": "ID Vault v1.65\n\n- Danh sách tài khoản gom theo thương hiệu, có logo, số lượng và banner riêng.\n- Icon từng tài khoản theo phân loại Cá nhân / Công việc / Dự phòng; gợi ý thương hiệu khi gõ chữ đầu.\n- Biểu tượng giấy tờ màu sắc theo từng loại; thẻ và nút có chiều sâu, bóng mềm hơn.\n- Gửi email nằm đầu mục Nhắc hạn.\n- Trang Cập nhật gọn, chỉ hiện trạng thái và tính năng của phiên bản tương ứng.\n\nĐã kiểm tra: 13 bài kiểm tra logic, 14 kiểm tra Android 15, nâng cấp từ V1.64 giữ giấy tờ/ảnh/cài đặt và tài khoản cũ; đối chiếu 27 ảnh chụp giao diện thật trên giả lập, ở cả Sáng/Tối.\n\nTiếp tục dùng khóa ký cố định. Cài đè bản hiện tại, không gỡ ứng dụng cũ. Chưa kiểm thử vân tay/Gmail trên Samsung thật.",
-  "status": "published",
-  "published_release": "https://github.com/nghialcvn/ID-Vault-Releases/releases/tag/v1.65"
+  "version": "1.66",
+  "version_code": 13,
+  "download_url": "https://sdmntprseasia.oaiusercontent.com/files/00000000-42f0-8207-af5e-af179d5360ab/raw?se=2026-11-18T23%3A27%3A20Z&sp=r&sv=2026-06-06&sr=b&scid=1b125e95-cca7-4ee8-b0d7-151969947114&skoid=ca37c3ec-ab43-496e-be5f-4684c5519a26&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-18T20%3A41%3A53Z&ske=2026-11-19T20%3A41%3A53Z&sks=b&skv=2026-06-06&sig=dusnij5eUfT6Y%2BnUKiOyIcRhlver9O8ghIFokVwAI78%3D",
+  "archive_sha256": "54aee663c6fa8e9c7ac6a5e76fb5b275148192e9590e8c3b9dd1119913bdba81",
+  "apk_sha256": "5a02686837132ed303298323b066f7e32ceaa1bfddf6e83ba394d231aa3b62ee",
+  "notes": "ID Vault v1.66\n\n- Khôi phục mục Nhắc hạn theo bố cục đã duyệt: email lên đầu, nhắc hạn giấy tờ ở giữa, nhắc đổi mật khẩu bên dưới.\n- Hiển thị đủ 90 ngày / 30 ngày / 7 ngày / Đến hạn trên một hàng; mốc Đến hạn màu đỏ.\n- Giữ nguyên câu chữ, thêm biểu tượng Gmail, lịch và khóa theo mẫu.\n- Nhấn Gửi email nhắc hạn để cấu hình Gmail; nhấn Nhắc đổi mật khẩu để chọn tài khoản cần thiết lập.\n\nĐã đối chiếu ảnh chụp giao diện Sáng/Tối trên Android 15; 13 kiểm tra logic và 14 kiểm tra Android thành công. Kiểm tra cài đè từ V1.65 giữ dữ liệu đã qua. Tiếp tục dùng khóa ký cố định. Cài đè, không gỡ ứng dụng cũ."
 }
