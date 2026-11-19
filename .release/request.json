@@ -1,10 +1,8 @@
 {
-  "version": "1.69",
-  "version_code": 16,
-  "download_url": "",
-  "archive_sha256": "d9d2a7f24113770619db473ec01ef5f10bdee0379328cca7c2337f8f33e9d272",
-  "apk_sha256": "8dfb42a55413820d8c0b31374b2de3e72bbd590ed05cfe09f054ec053e9c5f78",
-  "notes": "ID Vault v1.69\n\n- Cài đặt gọn trong hai khung, có chế độ Sáng và Tối.\n- Bật hoặc tắt thông báo trên thiết bị, giữ email nhắc hạn riêng.\n- Xoay, chia sẻ, tải xuống và xóa từng ảnh giấy tờ.\n- Thông báo khi có bản cập nhật mới.\n- Tùy chọn xác minh khuôn mặt khi điện thoại hỗ trợ.\n\nGiữ bố cục và nội dung đã duyệt. Hộp xác minh sinh trắc học do Android/Samsung cung cấp; mật khẩu tài khoản vẫn yêu cầu xác thực mạnh hoặc PIN.\n\nĐã qua 18 kiểm thử logic, 23 kiểm thử Android 15 và kiểm tra cài đè V1.68 giữ dữ liệu mã hóa. Đã đối chiếu ảnh chụp thực tế Sáng/Tối, Nhắc hạn, Bảo mật, xem ảnh và thông báo Android. Tiếp tục dùng khóa ký cố định. Cài đè bản hiện tại; không gỡ ứng dụng cũ.",
-  "status": "published",
-  "published_release": "https://github.com/nghialcvn/ID-Vault-Releases/releases/tag/v1.69"
+  "version": "1.70",
+  "version_code": 17,
+  "download_url": "https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-3df4-8211-8d89-01f21b7ed0f1/raw?se=2026-11-19T06%3A00%3A19Z&sp=r&sv=2026-06-06&sr=b&scid=cca01a2d-269f-4fd6-8ed3-c8c53e26108f&skoid=ca37c3ec-ab43-496e-be5f-4684c5519a26&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-18T20%3A34%3A37Z&ske=2026-11-19T20%3A34%3A37Z&sks=b&skv=2026-06-06&sig=t3PWM0Rhlq629YbqUn4FOjZgYDVCnZqPu30UsIZGAXM%3D",
+  "archive_sha256": "1e3cb1890629f9806ddfe0dd1ce945bac41c6f8b6569fc5de4ee8c5bd2f7e911",
+  "apk_sha256": "6a97536736bdb96c3b38c4a59689df97e5f31055d4ba2ef4c9f63f38eb4fc777",
+  "notes": "ID Vault v1.70\n\n- Mở khóa bằng vân tay và khuôn mặt trong cùng hộp xác minh hệ thống.\n- Tự dùng các phương thức đã đăng ký trên điện thoại, có PIN dự phòng.\n- Bỏ lựa chọn riêng Vân tay / Khuôn mặt trong Cài đặt.\n\nCác tab xác minh do Samsung/Android hiển thị theo thiết bị. Không tự nhận diện khuôn mặt bằng camera. Mật khẩu tài khoản, kho mã hóa và các giao diện khác giữ nguyên.\n\nĐã qua 18 kiểm thử logic, 24 kiểm thử Android 15 và cài đè V1.69 giữ dữ liệu. Đã kiểm tra cả hai lựa chọn cũ không còn lọc cấu hình xác minh và xem ảnh giao diện thật. Máy giả lập không xác nhận thay giao diện hai tab đặc thù của Samsung trên thiết bị thực tế.\n\nCài đè bản hiện tại bằng cùng khóa ký cố định; không gỡ ứng dụng cũ."
 }
