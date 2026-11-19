@@ -1,8 +1,10 @@
 {
   "version": "1.69",
   "version_code": 16,
-  "download_url": "https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-2d9c-8211-bafe-e532ec61866b/raw?se=2026-11-19T04%3A15%3A47Z&sp=r&sv=2026-06-06&sr=b&scid=d99895d1-0cf7-4134-84c5-3c8b55631fa8&skoid=6980ab1e-b994-4668-84de-ad0444c9d08b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-18T20%3A32%3A40Z&ske=2026-11-19T20%3A32%3A40Z&sks=b&skv=2026-06-06&sig=kwvhkSUgh7Ox7VBjBvynAs1pwvm4fQLTUpBBISAFgTY%3D",
+  "download_url": "",
   "archive_sha256": "d9d2a7f24113770619db473ec01ef5f10bdee0379328cca7c2337f8f33e9d272",
   "apk_sha256": "8dfb42a55413820d8c0b31374b2de3e72bbd590ed05cfe09f054ec053e9c5f78",
-  "notes": "ID Vault v1.69\n\n- Cài đặt gọn trong hai khung, có chế độ Sáng và Tối.\n- Bật hoặc tắt thông báo trên thiết bị, giữ email nhắc hạn riêng.\n- Xoay, chia sẻ, tải xuống và xóa từng ảnh giấy tờ.\n- Thông báo khi có bản cập nhật mới.\n- Tùy chọn xác minh khuôn mặt khi điện thoại hỗ trợ.\n\nGiữ bố cục và nội dung đã duyệt. Hộp xác minh sinh trắc học do Android/Samsung cung cấp; mật khẩu tài khoản vẫn yêu cầu xác thực mạnh hoặc PIN.\n\nĐã qua 18 kiểm thử logic, 23 kiểm thử Android 15 và kiểm tra cài đè V1.68 giữ dữ liệu mã hóa. Đã đối chiếu ảnh chụp thực tế Sáng/Tối, Nhắc hạn, Bảo mật, xem ảnh và thông báo Android. Tiếp tục dùng khóa ký cố định. Cài đè bản hiện tại; không gỡ ứng dụng cũ."
+  "notes": "ID Vault v1.69\n\n- Cài đặt gọn trong hai khung, có chế độ Sáng và Tối.\n- Bật hoặc tắt thông báo trên thiết bị, giữ email nhắc hạn riêng.\n- Xoay, chia sẻ, tải xuống và xóa từng ảnh giấy tờ.\n- Thông báo khi có bản cập nhật mới.\n- Tùy chọn xác minh khuôn mặt khi điện thoại hỗ trợ.\n\nGiữ bố cục và nội dung đã duyệt. Hộp xác minh sinh trắc học do Android/Samsung cung cấp; mật khẩu tài khoản vẫn yêu cầu xác thực mạnh hoặc PIN.\n\nĐã qua 18 kiểm thử logic, 23 kiểm thử Android 15 và kiểm tra cài đè V1.68 giữ dữ liệu mã hóa. Đã đối chiếu ảnh chụp thực tế Sáng/Tối, Nhắc hạn, Bảo mật, xem ảnh và thông báo Android. Tiếp tục dùng khóa ký cố định. Cài đè bản hiện tại; không gỡ ứng dụng cũ.",
+  "status": "published",
+  "published_release": "https://github.com/nghialcvn/ID-Vault-Releases/releases/tag/v1.69"
 }
