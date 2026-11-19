@@ -1,8 +1,9 @@
 {
   "version": "1.71",
   "version_code": 18,
-  "download_url": "https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-afc4-8211-ba6e-6426a12122ff/raw?se=2026-11-19T06%3A54%3A29Z&sp=r&sv=2026-06-06&sr=b&scid=9423518c-8039-4649-8ccc-c645fc836962&skoid=ca37c3ec-ab43-496e-be5f-4684c5519a26&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-19T02%3A01%3A40Z&ske=2026-11-20T02%3A01%3A40Z&sks=b&skv=2026-06-06&sig=Odf/e%2BXXNh3Sc%2BzFhZw6vd9b4/rncYqAZ2mo9oyxoGk%3D",
+  "download_url": "",
   "archive_sha256": "9407664fbec484b588b2474ffe7375717665ad6f05fafc8039c89d511ed53afa",
   "apk_sha256": "c9d36db76201e7be68fcd706562eca0614641eef62361d0f0a128d31ca9cc583",
-  "notes": "ID Vault v1.71\n\n- Nhận diện khuôn mặt thành công vào thẳng ứng dụng, không yêu cầu xác nhận thêm\n- Thêm logo MSB, Timo, CAKE, Manulife, VNeID, VNeTraffic, VssID, MyTV, FPT Play, MetaMask và Binance\n- Bổ sung MSB, Timo và CAKE vào Bank Digital; giữ Lazada trong Sàn TMĐT\n\nĐã kiểm tra giao diện Sáng/Tối trên Android 15, 26 bài kiểm thử Android và cài đè từ V1.70 giữ dữ liệu. Dùng khóa ký cố định để cập nhật trực tiếp."
+  "status": "published",
+  "published_release": "https://github.com/nghialcvn/ID-Vault-Releases/releases/tag/v1.71"
 }
