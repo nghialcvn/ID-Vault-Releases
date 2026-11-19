@@ -1,10 +1,8 @@
 {
-  "version": "1.66",
-  "version_code": 13,
-  "download_url": "",
-  "archive_sha256": "54aee663c6fa8e9c7ac6a5e76fb5b275148192e9590e8c3b9dd1119913bdba81",
-  "apk_sha256": "5a02686837132ed303298323b066f7e32ceaa1bfddf6e83ba394d231aa3b62ee",
-  "notes": "ID Vault v1.66\n\n- Khôi phục mục Nhắc hạn theo bố cục đã duyệt: email lên đầu, nhắc hạn giấy tờ ở giữa, nhắc đổi mật khẩu bên dưới.\n- Hiển thị đủ 90 ngày / 30 ngày / 7 ngày / Đến hạn trên một hàng; mốc Đến hạn màu đỏ.\n- Giữ nguyên câu chữ, thêm biểu tượng Gmail, lịch và khóa theo mẫu.\n- Nhấn Gửi email nhắc hạn để cấu hình Gmail; nhấn Nhắc đổi mật khẩu để chọn tài khoản cần thiết lập.\n\nĐã đối chiếu ảnh chụp giao diện Sáng/Tối trên Android 15; 13 kiểm tra logic và 14 kiểm tra Android thành công. Kiểm tra cài đè từ V1.65 giữ dữ liệu đã qua. Tiếp tục dùng khóa ký cố định. Cài đè, không gỡ ứng dụng cũ.",
-  "status": "published",
-  "published_release": "https://github.com/nghialcvn/ID-Vault-Releases/releases/tag/v1.66"
+  "version": "1.67",
+  "version_code": 14,
+  "download_url": "https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-e258-8211-940f-d1fd64fb7fb1/raw?se=2026-11-19T01%3A10%3A14Z&sp=r&sv=2026-06-06&sr=b&scid=80ef8c1c-d4d7-498a-a1a4-7b9264a78928&skoid=ca37c3ec-ab43-496e-be5f-4684c5519a26&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-19T00%3A32%3A27Z&ske=2026-11-20T00%3A32%3A27Z&sks=b&skv=2026-06-06&sig=qF6TXOo8M5aQAuu8f0iXpw4lWv04RpmquKBBdZzu%2BLw%3D",
+  "archive_sha256": "9e7339d5c3f08d562a16ea9e528daa49b442333860932448f41818378c693c06",
+  "apk_sha256": "3a83c1e7beaaac9ce26f5929f1eed5e3553c00068d72fb80d889783010c3e0b6",
+  "notes": "ID Vault v1.67\n\n- Logo thương hiệu không khung trắng theo demo đã duyệt.\n- Thêm Hilton và Tru by Hilton, giữ gợi ý khi gõ chữ đầu.\n- Tài khoản khác ở cuối danh sách: nhập tên thương hiệu và chèn logo tùy chọn.\n- Không chèn ảnh dùng logo mặc định; logo riêng được lưu mã hóa, dùng chung trong nhóm và đi theo bản sao lưu.\n\nCài đè bản hiện tại, không gỡ ứng dụng cũ. Tiếp tục dùng khóa ký cố định.\n\nĐã kiểm tra: 13 kiểm tra logic, 17 kiểm tra Android 15, cài đè từ V1.66 giữ dữ liệu; lưu không logo, chọn logo, sao lưu/khôi phục logo cùng mật khẩu có xác thực. Đã đối chiếu ảnh giao diện thật Sáng/Tối với demo đã duyệt."
 }
