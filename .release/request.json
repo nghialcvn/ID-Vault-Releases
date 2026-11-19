@@ -1,8 +1,8 @@
 {
   "version": "1.73",
   "version_code": 20,
-  "download_url": "https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-ec14-8211-a187-f341bb20534d/raw?se=2026-11-19T13%3A54%3A23Z&sp=r&sv=2026-06-06&sr=b&scid=6f78b85d-e116-414b-8439-07a5183e8015&skoid=9063adf3-a524-4acf-b70a-8731b33f2f50&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-18T20%3A30%3A14Z&ske=2026-11-19T20%3A30%3A14Z&sks=b&skv=2026-06-06&sig=G/jOwmTl4DrPncQZJ9lst7j1YDp4gDS0NaKjOL0Q3Xk%3D",
-  "archive_sha256": "c835ff1dba67d8b6262fbb135bb2cff9aa10c51b421554ccc235f92637076479",
-  "apk_sha256": "86f69bf6cf47186292b632c54baf990a36d8efeac8b78b32f3411ad3038bc1a0",
-  "notes": "## Tính năng trong bản 1.73\n\n- Sửa tên và logo The Lobby trong nhóm Hilton.\n- Tách giấy tờ theo từng người; thêm và sửa người thân riêng.\n- Chọn giới tính bằng biểu tượng, tự đổi avatar tương ứng; hàng người sở hữu chiếm 2/3 và biểu tượng giới tính chiếm 1/3.\n- Tự nhập số ngày nhắc hạn giấy tờ, giữ nguyên các mốc 30 ngày, 7 ngày và đến hạn.\n- Kiểm tra cập nhật nền mỗi 15 phút khi thiết bị cho phép chạy nền; Android có thể trì hoãn lịch kiểm tra.\n\n## Kiểm tra phát hành\n\nAPK được ký bằng khóa phát hành hiện tại. Cài đè để giữ dữ liệu, không gỡ ứng dụng cũ.\n"
+  "download_url": "",
+  "status": "published",
+  "published_release": "https://github.com/nghialcvn/ID-Vault-Releases/releases/tag/v1.73",
+  "apk_sha256": "86f69bf6cf47186292b632c54baf990a36d8efeac8b78b32f3411ad3038bc1a0"
 }
