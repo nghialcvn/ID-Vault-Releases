@@ -1,10 +1,8 @@
 {
-  "version": "1.67",
-  "version_code": 14,
-  "download_url": "",
-  "archive_sha256": "9e7339d5c3f08d562a16ea9e528daa49b442333860932448f41818378c693c06",
-  "apk_sha256": "3a83c1e7beaaac9ce26f5929f1eed5e3553c00068d72fb80d889783010c3e0b6",
-  "notes": "ID Vault v1.67\n\n- Logo thương hiệu không khung trắng theo demo đã duyệt.\n- Thêm Hilton và Tru by Hilton, giữ gợi ý khi gõ chữ đầu.\n- Tài khoản khác ở cuối danh sách: nhập tên thương hiệu và chèn logo tùy chọn.\n- Không chèn ảnh dùng logo mặc định; logo riêng được lưu mã hóa, dùng chung trong nhóm và đi theo bản sao lưu.\n\nCài đè bản hiện tại, không gỡ ứng dụng cũ. Tiếp tục dùng khóa ký cố định.\n\nĐã kiểm tra: 13 kiểm tra logic, 17 kiểm tra Android 15, cài đè từ V1.66 giữ dữ liệu; lưu không logo, chọn logo, sao lưu/khôi phục logo cùng mật khẩu có xác thực. Đã đối chiếu ảnh giao diện thật Sáng/Tối với demo đã duyệt.",
-  "status": "published",
-  "published_release": "https://github.com/nghialcvn/ID-Vault-Releases/releases/tag/v1.67"
+  "version": "1.68",
+  "version_code": 15,
+  "download_url": "https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-b3a8-8211-af64-28c050aad0f4/raw?se=2026-11-19T02%3A40%3A11Z&sp=r&sv=2026-06-06&sr=b&scid=c94c10c6-04bc-443e-9bbc-039a34832fc8&skoid=6980ab1e-b994-4668-84de-ad0444c9d08b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-19T01%3A02%3A19Z&ske=2026-11-20T01%3A02%3A19Z&sks=b&skv=2026-06-06&sig=lbL2WPzOC8jnA3gNai%2B665lPd7P8sunbWP4284HnTa4%3D",
+  "archive_sha256": "032a824a4a707965190e58a222cac2cd6178e53f7dce135d78ba3c598437368b",
+  "apk_sha256": "6451e624a678efdc0f3f60b93d9aa157d6b26d792dcc5b7488404e4b400cd4e5",
+  "notes": "ID Vault v1.68\n\n- Meta: Facebook, Instagram, WhatsApp và Threads.\n- Sàn TMĐT: Lazada, Shopee và Taobao.\n- Bank Digital: từng ngân hàng và danh sách tài khoản.\n- Banner riêng, tổng số tài khoản và điều hướng theo từng nhóm; Google và các thương hiệu khác vẫn mở trực tiếp.\n\nHilton và Tru by Hilton giữ độc lập. Tiếp tục dùng khóa ký cố định. Cài đè bản hiện tại, không gỡ ứng dụng cũ.\n\nĐã kiểm tra: 18 kiểm tra logic, 18 kiểm tra Android 15, cài đè từ V1.67 giữ nguyên dữ liệu mã hóa, mật khẩu và logo riêng. Đã xem ảnh giao diện thật Sáng/Tối, kiểm tra đi qua ba tầng và quay lại, tìm kiếm và tổng số tài khoản."
 }
