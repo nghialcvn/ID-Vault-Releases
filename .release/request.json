@@ -1,9 +1,8 @@
 {
-  "version": "1.71",
-  "version_code": 18,
-  "download_url": "",
-  "archive_sha256": "9407664fbec484b588b2474ffe7375717665ad6f05fafc8039c89d511ed53afa",
-  "apk_sha256": "c9d36db76201e7be68fcd706562eca0614641eef62361d0f0a128d31ca9cc583",
-  "status": "published",
-  "published_release": "https://github.com/nghialcvn/ID-Vault-Releases/releases/tag/v1.71"
+  "version": "1.72",
+  "version_code": 19,
+  "download_url": "https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-3e88-8211-ab8b-9bf34f12d5ec/raw?se=2026-11-19T09%3A33%3A12Z&sp=r&sv=2026-06-06&sr=b&scid=f691702c-ca3b-4c6f-85e6-e3c4f5281e5d&skoid=fb469448-2cc9-41bd-a5a6-6e020952b47a&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-19T01%3A29%3A56Z&ske=2026-11-20T01%3A29%3A56Z&sks=b&skv=2026-06-06&sig=UfhLT2hZN6Od/zZDj3JHEDUMoPzdTozZqQC43WoRIXE%3D",
+  "archive_sha256": "aaaa2950d185646a3fcedd0b6d9915585dd2392db388ef4f8fb41b0fda9b0b9f",
+  "apk_sha256": "3b6ec258ffc3ff2167093606179db4ecd041c9e15c5f5f3e96dd190b088b4373",
+  "notes": "ID Vault v1.72\n\n- Gom Cadena HRM, Hilton Honors, Saba và Lobby vào nhóm Hilton.\n- Banner Hilton và logo từng ứng dụng theo mẫu đã duyệt; Lobby dùng logo Tru by Hilton.\n- Kiểm tra cập nhật nền mỗi giờ và tự lên lịch lại sau khi cài bản cập nhật.\n\nĐã kiểm tra giao diện Sáng/Tối trên Android 15, 29 bài kiểm thử Android, 19 bài kiểm thử logic và cài đè từ V1.71 giữ dữ liệu. Android có thể trì hoãn lịch nền khi tiết kiệm pin."
 }
