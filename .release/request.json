@@ -1,8 +1,8 @@
 {
-  "version": "1.73",
-  "version_code": 20,
-  "download_url": "",
-  "status": "published",
-  "published_release": "https://github.com/nghialcvn/ID-Vault-Releases/releases/tag/v1.73",
-  "apk_sha256": "86f69bf6cf47186292b632c54baf990a36d8efeac8b78b32f3411ad3038bc1a0"
+  "version": "1.74",
+  "version_code": 21,
+  "download_url": "https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-eb24-8211-9455-2fdb282b7bd5/raw?se=2026-11-20T15%3A19%3A33Z&sp=r&sv=2026-06-06&sr=b&scid=dae1f5cc-c6ad-4d84-8b48-dc2fa5de1c13&skoid=54865dd2-31dc-44cc-a877-635aa4250446&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-20T04%3A14%3A18Z&ske=2026-11-21T04%3A14%3A18Z&sks=b&skv=2026-06-06&sig=XsvISMZRkCkBO1/wwL3wAJL/vrlcqZyHAMd5JXFv6zU%3D",
+  "archive_sha256": "449fa568880d893827520652919f74a42d379d3e8ba929cac664fa6105ec520e",
+  "apk_sha256": "71eebb19fe4347d084240567b8e96f6e44c7bb89fcb6e2baa7a9cf32d9ca216a",
+  "notes": "## Tính năng trong bản 1.74\n\n- Đồng bộ toàn bộ giao diện theo mẫu đã duyệt: nền xanh đêm, khung kính, viền cyan và hiệu ứng đổ bóng.\n- Hoàn thiện banner giấy tờ, biểu tượng giấy tờ và avatar nam nữ theo mẫu.\n- Tinh chỉnh giấy tờ theo người; giữ bố cục người sở hữu 2/3 và chọn giới tính bằng biểu tượng 1/3.\n- Hoàn thiện khung Hilton và logo The Lobby; giữ nguyên các nhóm tài khoản.\n- Đồng bộ giao diện cài đặt, nhắc hạn, sao lưu, xem ảnh và thông tin cập nhật.\n\n## Cài đặt\n\nAPK được ký bằng khóa phát hành hiện tại. Cài đè để giữ dữ liệu, không gỡ ứng dụng cũ.\n"
 }
