@@ -1,0 +1,87 @@
+name: Notify ID Vault updates by Firebase FCM
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "Existing latest release tag to notify (e.g. v1.82)"
+        required: true
+        type: string
+permissions:
+  contents: read
+  id-token: write
+concurrency:
+  group: idvault-fcm-release-notify
+  cancel-in-progress: false
+jobs:
+  notify:
+    # Explicitly skip until Google Cloud Workload Identity Federation is configured.
+    if: ${{ vars.IDVAULT_GCP_WIF_PROVIDER != '' && vars.IDVAULT_GCP_FCM_SERVICE_ACCOUNT != '' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Verify latest GitHub release and official APK asset
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TARGET_TAG: ${{ github.event.release.tag_name || inputs.release_tag }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          [[ "$TARGET_TAG" =~ ^v1[.][0-9]+$ ]] || { echo "::error::Invalid release tag"; exit 1; }
+          for ATTEMPT in $(seq 1 10); do
+            gh api repos/nghialcvn/ID-Vault-Releases/releases/latest > latest.json
+            if python3 - "$TARGET_TAG" <<'PY'
+import json,sys
+r=json.load(open("latest.json",encoding="utf-8"))
+tag=sys.argv[1]
+version=tag.removeprefix("v")
+name=f"id-vault-v{version}.apk"
+assets=[a for a in r.get("assets",[]) if a.get("name")==name and a.get("state")=="uploaded"]
+assert r.get("tag_name")==tag, "Not the latest published release"
+assert not r.get("draft") and not r.get("prerelease"), "Not a stable release"
+assert len(assets)==1 and assets[0].get("digest","").startswith("sha256:"), "Signed APK asset/digest not available"
+PY
+            then exit 0; fi
+            sleep 12
+          done
+          echo "::error::Verified latest APK release was not ready"
+          exit 1
+      - name: Get short-lived Google Cloud access token (no private key in GitHub)
+        id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          token_format: access_token
+          access_token_scopes: https://www.googleapis.com/auth/firebase.messaging
+          workload_identity_provider: ${{ vars.IDVAULT_GCP_WIF_PROVIDER }}
+          service_account: ${{ vars.IDVAULT_GCP_FCM_SERVICE_ACCOUNT }}
+      - name: Notify subscribers (data-only; the app verifies GitHub independently)
+        env:
+          FIREBASE_ACCESS_TOKEN: ${{ steps.auth.outputs.access_token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+import json,os,urllib.request
+url="https://fcm.googleapis.com/v1/projects/id-vault-notify/messages:send"
+payload={
+  "message":{
+    "topic":"idvault_updates",
+    "data":{"type":"idvault_release"},
+    "android":{"priority":"HIGH","ttl":"86400s"},
+  }
+}
+req=urllib.request.Request(
+  url,
+  data=json.dumps(payload).encode("utf-8"),
+  headers={
+    "Authorization":"Bearer "+os.environ["FIREBASE_ACCESS_TOKEN"],
+    "Content-Type":"application/json; charset=UTF-8",
+  },
+  method="POST",
+)
+with urllib.request.urlopen(req,timeout=30) as resp:
+  body=json.load(resp)
+  assert resp.status==200 and body.get("name","").startswith("projects/id-vault-notify/messages/")
+  print("FCM accepted the release notification. Delivery depends on device/network state.")
+PY
