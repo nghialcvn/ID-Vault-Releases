@@ -21,6 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      - uses: actions/checkout@v4
       - name: Verify latest GitHub release and official APK asset
         env:
           GH_TOKEN: ${{ github.token }}
