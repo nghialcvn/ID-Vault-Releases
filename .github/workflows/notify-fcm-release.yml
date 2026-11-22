@@ -32,16 +32,16 @@ jobs:
           for ATTEMPT in $(seq 1 10); do
             gh api repos/nghialcvn/ID-Vault-Releases/releases/latest > latest.json
             if python3 - "$TARGET_TAG" <<'PY'
-import json,sys
-r=json.load(open("latest.json",encoding="utf-8"))
-tag=sys.argv[1]
-version=tag.removeprefix("v")
-name=f"id-vault-v{version}.apk"
-assets=[a for a in r.get("assets",[]) if a.get("name")==name and a.get("state")=="uploaded"]
-assert r.get("tag_name")==tag, "Not the latest published release"
-assert not r.get("draft") and not r.get("prerelease"), "Not a stable release"
-assert len(assets)==1 and assets[0].get("digest","").startswith("sha256:"), "Signed APK asset/digest not available"
-PY
+          import json,sys
+          r=json.load(open("latest.json",encoding="utf-8"))
+          tag=sys.argv[1]
+          version=tag.removeprefix("v")
+          name=f"id-vault-v{version}.apk"
+          assets=[a for a in r.get("assets",[]) if a.get("name")==name and a.get("state")=="uploaded"]
+          assert r.get("tag_name")==tag, "Not the latest published release"
+          assert not r.get("draft") and not r.get("prerelease"), "Not a stable release"
+          assert len(assets)==1 and assets[0].get("digest","").startswith("sha256:"), "Signed APK asset/digest not available"
+          PY
             then exit 0; fi
             sleep 12
           done
@@ -62,26 +62,26 @@ PY
         run: |
           set -euo pipefail
           python3 - <<'PY'
-import json,os,urllib.request
-url="https://fcm.googleapis.com/v1/projects/id-vault-notify/messages:send"
-payload={
-  "message":{
-    "topic":"idvault_updates",
-    "data":{"type":"idvault_release"},
-    "android":{"priority":"HIGH","ttl":"86400s"},
-  }
-}
-req=urllib.request.Request(
-  url,
-  data=json.dumps(payload).encode("utf-8"),
-  headers={
-    "Authorization":"Bearer "+os.environ["FIREBASE_ACCESS_TOKEN"],
-    "Content-Type":"application/json; charset=UTF-8",
-  },
-  method="POST",
-)
-with urllib.request.urlopen(req,timeout=30) as resp:
-  body=json.load(resp)
-  assert resp.status==200 and body.get("name","").startswith("projects/id-vault-notify/messages/")
-  print("FCM accepted the release notification. Delivery depends on device/network state.")
-PY
+          import json,os,urllib.request
+          url="https://fcm.googleapis.com/v1/projects/id-vault-notify/messages:send"
+          payload={
+            "message":{
+              "topic":"idvault_updates",
+              "data":{"type":"idvault_release"},
+              "android":{"priority":"HIGH","ttl":"86400s"},
+            }
+          }
+          req=urllib.request.Request(
+            url,
+            data=json.dumps(payload).encode("utf-8"),
+            headers={
+              "Authorization":"Bearer "+os.environ["FIREBASE_ACCESS_TOKEN"],
+              "Content-Type":"application/json; charset=UTF-8",
+            },
+            method="POST",
+          )
+          with urllib.request.urlopen(req,timeout=30) as resp:
+            body=json.load(resp)
+            assert resp.status==200 and body.get("name","").startswith("projects/id-vault-notify/messages/")
+            print("FCM accepted the release notification. Delivery depends on device/network state.")
+          PY
