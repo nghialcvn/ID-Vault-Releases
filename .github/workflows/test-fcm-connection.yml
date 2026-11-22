@@ -1,0 +1,58 @@
+name: Test ID Vault Firebase FCM connection (no notification sent)
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/test-fcm-connection.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+  id-token: write
+jobs:
+  verify-fcm:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify both GitHub configuration variables exist
+        env:
+          WIF: ${{ vars.IDVAULT_GCP_WIF_PROVIDER }}
+          SENDER: ${{ vars.IDVAULT_GCP_FCM_SERVICE_ACCOUNT }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$WIF" || { echo '::error::Missing IDVAULT_GCP_WIF_PROVIDER'; exit 1; }
+          test -n "$SENDER" || { echo '::error::Missing IDVAULT_GCP_FCM_SERVICE_ACCOUNT'; exit 1; }
+          test "$WIF" = 'projects/584766882925/locations/global/workloadIdentityPools/idvault-github/providers/github-actions'
+          test "$SENDER" = 'idvault-fcm-sender@id-vault-notify.iam.gserviceaccount.com'
+          echo 'Verified WIF resource and sender service account configuration'
+      - name: Obtain Google Cloud short-lived access token using GitHub OIDC
+        id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          token_format: access_token
+          access_token_scopes: https://www.googleapis.com/auth/firebase.messaging
+          workload_identity_provider: ${{ vars.IDVAULT_GCP_WIF_PROVIDER }}
+          service_account: ${{ vars.IDVAULT_GCP_FCM_SERVICE_ACCOUNT }}
+      - name: FCM validate_only test (does not deliver any notification)
+        env:
+          FIREBASE_ACCESS_TOKEN: ${{ steps.auth.outputs.access_token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json,os,urllib.request,urllib.error,sys
+          endpoint='https://fcm.googleapis.com/v1/projects/id-vault-notify/messages:send'
+          payload={'validate_only':True,'message':{'topic':'idvault_updates','data':{'type':'idvault_release'}}}
+          request=urllib.request.Request(endpoint,data=json.dumps(payload).encode(),headers={
+            'Authorization':'Bearer '+os.environ['FIREBASE_ACCESS_TOKEN'],
+            'Content-Type':'application/json; charset=utf-8'
+          },method='POST')
+          try:
+            with urllib.request.urlopen(request,timeout=30) as resp:
+              assert resp.status==200,(resp.status,resp.read()[:400])
+              print('PASS: WIF authentication and FCM API validation-only message accepted; no device notification sent.')
+          except urllib.error.HTTPError as e:
+            print('FCM HTTP '+str(e.code)+': '+e.read().decode(errors='replace')[:800],file=sys.stderr)
+            raise
+          PY
